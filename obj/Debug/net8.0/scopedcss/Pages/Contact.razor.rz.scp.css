@@ -1,0 +1,11 @@
+
+.bgImage[b-1hbk1n1eyx]{
+    background-image: url("./Assets/banner.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.borderCircular[b-1hbk1n1eyx]{
+    border-radius: 94% 6% 98% 2% / 23% 82% 18% 77% ;
+
+}

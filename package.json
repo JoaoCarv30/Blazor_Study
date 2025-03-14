@@ -1,0 +1,16 @@
+{
+  "name": "blazorwind",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tail": "npx tailwindcss -i ./Themes/Theme.css -o ./wwwroot/css/theme.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}
