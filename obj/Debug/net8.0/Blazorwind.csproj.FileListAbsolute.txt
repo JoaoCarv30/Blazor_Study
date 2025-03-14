@@ -1031,3 +1031,5 @@
 /home/joao/Blazor/Blazorwind/obj/Debug/net8.0/scopedcss/Pages/Contact.razor.rz.scp.css
 /home/joao/Blazor/Blazorwind/obj/Debug/net8.0/scopedcss/projectbundle/Blazorwind.bundle.scp.css
 /home/joao/Blazor/Blazorwind/obj/Debug/net8.0/scopedcss/Pages/Home.razor.rz.scp.css
+/home/joao/Blazor/Blazorwind/obj/Debug/net8.0/Blazorwind.sourcelink.json
+/home/joao/Blazor/Blazorwind/obj/Debug/net8.0/scopedcss/Pages/About.razor.rz.scp.css

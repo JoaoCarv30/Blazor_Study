@@ -3,77 +3,63 @@
 @using Microsoft.AspNetCore.Components.Forms
 @layout Blazorwind.Layout.MainLayout
 
-
-<section class="grid grid-cols-3 h-screen border-none ">
-    <div class="col-span-2 bgImage  p-4 flex items-center justify-center">
+<section class="h-screen grid grid-cols-1 lg:grid-cols-3">
+    <div class="hidden lg:block col-span-2 bgImage p-4 flex items-center justify-center">
     </div>
-    <div class=" p-4 text-black flex flex-col items-center justify-center gap-4 ">
-
-
+    <div class="p-4 text-black flex flex-col items-center justify-center gap-4 w-full max-w-lg mx-auto lg:w-auto lg:max-w-none">
         <div class="borderCircular bg-custom-blue flex items-center justify-center p-4">
             <img src="./Assets/Egologo_115x120.png" alt="Logo da Empresa" class="w-full">
         </div>
 
-
-        <div class="flex items-center justify-center flex-col">
+        <div class="text-center">
             <h1 class="text-4xl font-bold">Contact</h1>
             <p class="text-gray-500">Fill out the form below and we will respond as soon as possible.</p>
         </div>
 
-
-        <EditForm Model="@contactModel" class="w-full flex items-center justify-start flex-col gap-4 mt-5">
+        <EditForm Model="@contactModel" class="w-full flex flex-col gap-4 mt-5">
             <DataAnnotationsValidator/>
 
             <div class="w-full flex flex-col">
                 <label for="name" class="font-semibold">Name</label>
-                <InputText id="name" class="border 
-  p-2 rounded-md w-full" @bind-Value="@contactModel.Name"/>
+                <InputText id="name" class="border p-2 rounded-md w-full" @bind-Value="@contactModel.Name"/>
                 <ValidationMessage For="@(() => contactModel.Name)" class="text-red-500 text-sm"/>
             </div>
 
             <div class="w-full flex flex-col">
                 <label for="email" class="font-semibold">Email</label>
-                <InputText id="email" class="border  p-2 rounded-md w-full" @bind-Value="@contactModel.Email"/>
+                <InputText id="email" class="border p-2 rounded-md w-full" @bind-Value="@contactModel.Email"/>
                 <ValidationMessage For="@(() => contactModel.Email)" class="text-red-500 text-sm"/>
             </div>
 
             <div class="w-full flex flex-col">
                 <label for="phone" class="font-semibold">Phone</label>
-                <InputText id="phone" class="border  p-2 rounded-md w-full" @bind-Value="@contactModel.Phone"/>
+                <InputText id="phone" class="border p-2 rounded-md w-full" @bind-Value="@contactModel.Phone"/>
                 <ValidationMessage For="@(() => contactModel.Phone)" class="text-red-500 text-sm"/>
             </div>
 
             <div class="w-full flex flex-col">
                 <label for="message" class="font-semibold">Message</label>
-                <InputTextArea id="message" class="border  p-2 rounded-md w-full h-24"
-                               @bind-Value="@contactModel.Message"/>
+                <InputTextArea id="message" class="border p-2 rounded-md w-full h-24" @bind-Value="@contactModel.Message"/>
                 <ValidationMessage For="@(() => contactModel.Message)" class="text-red-500 text-sm"/>
             </div>
 
-            <button type="submit"
-                    class="bg-blue-500 hover:bg-blue-700 border-none text-white font-bold p-2 w-full rounded-md mt-4">
-                Enviar
+            <button type="submit" class="bg-custom-blue hover:bg-custom-blue-50 text-white font-bold p-2 w-full rounded-md mt-4">
+                Send
             </button>
-
         </EditForm>
-        <div class="w-full h-full flex items-center justify-center flex-col">
 
-            <h3 class="text-xl font-bold mb-4">Social Medias</h3>
-            <div class="flex items-center justify-center gap-4">
+        <div class="w-full flex flex-col items-center">
+            <h3 class="text-xl font-bold mb-4">Social Media</h3>
+            <div class="flex gap-4">
                 <a href="https://www.facebook.com/" target="_blank">
-                    <img src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" alt="Facebook"
-                         class="w-12">
+                    <img src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" alt="Facebook" class="w-12">
                 </a>
                 <a href="https://www.instagram.com/" target="_blank">
-                    <img src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000" alt="Instagram"
-                         class="w-12">
+                    <img src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000" alt="Instagram" class="w-12">
                 </a>
                 <a href="https://www.twitter.com/" target="_blank">
-                    <img src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000" alt="Twitter"
-                         class="w-12">
+                    <img src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000" alt="Twitter" class="w-12">
                 </a>
-
-
             </div>
         </div>
     </div>

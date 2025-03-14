@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Blazorwind")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38a95abaa637df67377f1a4d194d9e198c2bd215")]
 [assembly: System.Reflection.AssemblyProductAttribute("Blazorwind")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Blazorwind")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

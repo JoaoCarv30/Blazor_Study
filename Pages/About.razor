@@ -1,0 +1,57 @@
+@page "/about"
+@using Blazorwind.Models
+@using Microsoft.AspNetCore.Components
+@using System.Net.Http.Json
+
+@layout Blazorwind.Layout.NavLayout
+
+<section class="w-screen h-screen flex flex-col items-center justify-center gap-4 gradient">
+    
+    <h1 class="font-bold text-white text-5xl mt-20"> Our collaborators </h1>
+
+    @if (persons.Count == 0)
+    {
+        <p>Carregando...</p>
+    }
+    else
+    {
+        <section class="w-full h-full flex items-center justify-center gap-6 ">
+            @foreach (var person in persons)
+            {
+                <div class="flex flex-col items-center justify-center bg-white shadow-lg rounded-xl p-6 mt-12 w-80">
+                    <img src="@person.ImageUrl" class="w-24 h-24 rounded-full border-4 border-blue-500 shadow-md"/>
+                    <div class="mt-4 text-center">
+                        <p class="text-lg font-semibold text-gray-900">@($"{person.FirstName} {person.LastName}")</p>
+                        <p class="text-gray-600 mt-1">📍 @person.Country - @person.City </p>
+                    </div>
+                </div>
+
+            }
+        </section>
+    }
+</section>
+
+@code{
+    private string urlApi = "https://randomuser.me/api/?results=5";
+
+    [Inject] public HttpClient Http { get; set; }
+
+    private List<PersonProfileModel> persons = new List<PersonProfileModel>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var response = await Http.GetFromJsonAsync<ApiResponse>(urlApi);
+            if (response != null && response.Results != null)
+            {
+                persons = response.Results;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao buscar dados: {ex.Message}");
+        }
+    }
+
+}
